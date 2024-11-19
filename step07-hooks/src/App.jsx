@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Ref01 from './Ref01'
-import { useEffect } from 'react'
-import { useRef } from 'react'
+
+import Memo01 from './Memo01';
+import Ref02 from './Ref02';
+import Ref03 from './Ref03';
+import Ref04 from './Ref04';
 
 function App() {
   
@@ -12,7 +10,12 @@ function App() {
   
   return (
     <>
-      <Ref01/>
+    {/* useEffect 실습 */}
+    {/* <Effect01/> */}
+    {/* <Effect02/> */}
+      {/* <Ref01/> */}
+      {/* <Memo01/> */}
+      <Ref04/>
     </>
   )
 }
