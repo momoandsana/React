@@ -11,6 +11,17 @@ const List = ({ todos, onUpdate, onDelete }) => { // props 구조 분해
         return null; // 또는 에러 메시지를 보여줄 수 있습니다.
     }
 
+    // 검색어를 입력했을 때 검색어를 포함한 todos 정보 조회
+    const getFilterData=()=>{
+     if(search==="")return todos;
+
+     const searchedTodos
+     =todos.filter((todo)=>todo.content.toLowerCase().includes(search.toLowerCase()));
+     return searchedTodos;
+    }
+
+    const filteredTodos=getFilterData();// lIst 컴포넌트가 리랜더링 될 때마다
+
     return (
         <div className="List">
             <h4>ToDo List 😸</h4>
@@ -21,7 +32,9 @@ const List = ({ todos, onUpdate, onDelete }) => { // props 구조 분해
             />
 
             <div className="todos_wrapper">
-                {todos.map((todo) => (
+                {
+               //  todos.map((todo) => (
+                    filteredTodos.map((todo) => (
                     <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete} />
                 ))}
             </div>
