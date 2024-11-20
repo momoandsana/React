@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import "./Editor.css";
 
 
 const Editor = () => {

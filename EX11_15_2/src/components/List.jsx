@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './TodoItem.css';
 import TodoItem from './TodoItem';
+import "./List.css";
 
 const List = () => {
      const[search,setSearch]=useState("");
