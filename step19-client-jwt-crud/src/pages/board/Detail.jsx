@@ -90,14 +90,14 @@ const Detail =()=>{
         <LabelText text={"등록일"}  initValue={board.regDate}/>
   
         <div className="divContent">
-          <div className="divContent_label">cotent</div> 
+          <div className="divContent_label">content</div> 
           <textarea className="divContent_textarea" placeholder="오늘은 어땠나요?"
            name="content"  disabled value={board.content}></textarea>
        </div>
       
       { board.member.name === localStorage.getItem("name") &&
        <div className="divBtn">
-            <Button text={"수정"}  type={"button"}  onClick={()=>{nav("/updateForm/"+id)}}/>
+            <Button text={"수정"}  type={"button"}  onClick={updateBoard}/>
             <Button text={"삭제"}  type={"button"} onClick={deleteBoard} />
         </div>
       }  
